@@ -1,8 +1,35 @@
 body {
-    background: #708090;
+    background: dimgrey;
+    padding-top: 50px;
+}
+
+img {
+    height: 600px;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    width: 100%;
 }
 
 h1 {
+    margin: 20px;
+}
+
+#itemThumbnail{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+p{
+    color: white;
+}
+
+/* CSS for progress bar page */
+
+#progressText {
     text-align: center;
     padding: 100px;
 }
