@@ -1,0 +1,75 @@
+body {
+    padding-top: 60px;
+}
+
+#pathImage{
+    margin: 15px
+}
+
+img{
+    width: 100%;
+}
+
+#visualiser-controls{
+    padding: 15px;
+    /* align-items: center; */
+    width: 70%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: cornflowerblue;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+}
+
+.container{
+    margin-top: 10px;
+    width: 1120px;
+}
+
+.btn{
+    margin: 10px;
+}
+
+#grid > div {
+    width: 20px;
+    height: 20px;
+    background-color: lightgrey;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+
+}
+
+.wall {
+    animation-name: wallAnimation;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes wallAnimation {
+    0% {
+        transform: scale(0.3);
+        background-color: lightgrey;
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: lightgrey;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: lightgrey;
+    }
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+}
