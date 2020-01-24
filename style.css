@@ -15,6 +15,11 @@ img {
 
 h1 {
     margin: 20px;
+    font-family: 'Dosis', sans-serif;
+}
+
+h2{
+    font-family: 'Dosis', sans-serif;
 }
 
 #itemThumbnail{
@@ -25,6 +30,7 @@ h1 {
 
 p{
     color: dimgrey;
+    font-family: 'Montseeat', sans-serif;
 }
 
 /* CSS for progress bar page */
