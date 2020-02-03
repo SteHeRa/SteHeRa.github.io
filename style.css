@@ -22,7 +22,7 @@ h2{
     font-family: 'Dosis', sans-serif;
 }
 
-#itemThumbnail{
+.itemThumbnail{
     width: 200px;
     height: 200px;
     margin: 10px;
