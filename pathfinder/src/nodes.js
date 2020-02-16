@@ -14,7 +14,7 @@ class node {
         this.visited = visited;
         this.animated = animated;   //will become true if node has been animated (this is to fix bugs with cursor colouring nodes incorrectly)
         this.shortestPath = shortestPath;
-        this. distance = distance;
+        this.distance = distance;
         this.start = start;
         this.end = end;
         this.wall = wall;

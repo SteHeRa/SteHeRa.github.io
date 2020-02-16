@@ -1,5 +1,5 @@
 function Djikstra () {
-    let unvisitedNodes = [];        //Array to hole all unvisited nodes
+    let unvisitedNodes = [];        //Array to hold all unvisited nodes
     let visitedNodes = [];          //Array to dump visited nodes into
     for(i = 0; i < grid[i].length; i++){
         unvisitedNodes = unvisitedNodes.concat(grid[i]);        //populating unvisited nodes array to make life easier for sorting and retrieving closest unvisited node 
@@ -58,8 +58,8 @@ function Djikstra () {
     }
 
 
-    function animateShortestPath(j){        //animating shortest path nodes - NEED TO TRY AND GET THIS TO ANIMATE AFTER VISITED NODES ANIMATION IS FINISHED
-        setTimeout(() => {                                                 //-----------------------------------------------------------------------------
+    function animateShortestPath(j){        //animating shortest path nodes
+        setTimeout(() => {                                                
             document.getElementById(`x${shortestPath[j].x}-y${shortestPath[j].y}`).style = 'background-color: #ffdf00';
             document.getElementById(`x${shortestPath[j].x}-y${shortestPath[j].y}`).className = 'shortestPathNode';
             shortestPath[j].shortestPath = true;
