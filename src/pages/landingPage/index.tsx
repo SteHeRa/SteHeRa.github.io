@@ -1,0 +1,68 @@
+import React from "react";
+import { Grid, Typography } from "@mui/material";
+import ProjectCard from "../../components/projectCard";
+import Icon from "../../components/Icon";
+import { projects } from "../../data";
+
+const LandingPage = () => {
+  return (
+    <Grid container p={6} spacing={3}>
+      <Grid item container xs={12} spacing={3}>
+        <Grid item xs={12}>
+          <Typography variant="h1">Stephen Head-Rapson</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h3" style={{ fontFamily: "Poppins" }}>
+            Welcome to my portfolio
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body1">
+            <b>I am a Full Stack Software Engineer</b> living in London. I am
+            experienced with Javascript technologies such as Typescript, React,
+            Express, Koa, and Node.js as well as SQL & NoSQL databases. I am a
+            natural born problem solver with a burning desire to make things and
+            keep learning new skills. When i'm not working you can find me in
+            the workshop messing about with Arduinos, woodworking, metalworking,
+            goldsmithing or making music with friends.
+          </Typography>
+        </Grid>
+        <Grid item container xs={12} justifyContent="flex-start">
+          <Grid item container xs={3} alignItems="center" gap={2}>
+            <Icon icon="GitHub" />
+            <Typography variant="body1">
+              Check out my <a href="https://github.com/SteHeRa">Github</a>
+            </Typography>
+          </Grid>
+          <Grid item container xs={3} alignItems="center" gap={2}>
+            <Icon icon="LinkedIn" />
+            <Typography variant="body1">
+              Check out my{" "}
+              <a href="https://www.linkedin.com/in/stephen-head-rapson/">
+                LinkedIn
+              </a>
+            </Typography>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        item
+        xs={3}
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
+        <div className="timeLine"></div>
+      </Grid>
+      <Grid item container xs={9} gap={6}>
+        {Object.values(projects).map((project) => (
+          <Grid item xs={12}>
+            <ProjectCard project={project} />
+          </Grid>
+        ))}
+      </Grid>
+    </Grid>
+  );
+};
+
+export default LandingPage;

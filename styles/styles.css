@@ -1,10 +1,42 @@
+body {
+  margin: 0;
+}
+
 .app-container {
+  box-sizing: border-box;
+}
+
+.timeLine {
+  border-radius: 15px;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  height: 93%;
+  width: 10px;
+  background-color: #3dd2cc;
+}
+
+.timeLineDot {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background-color: #3e6b89;
+}
+
+.icon-container {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #eee;
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.text-padding-bottom {
+  padding-bottom: 36px;
+}
+
+.text-padding-top {
+  padding-top: 36px;
 }
 
 .toggle-container {
