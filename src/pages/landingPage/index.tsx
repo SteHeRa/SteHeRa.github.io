@@ -6,8 +6,8 @@ import { projects } from "../../data";
 
 const LandingPage = () => {
   return (
-    <Grid container p={6} spacing={3}>
-      <Grid item container xs={12} spacing={3}>
+    <Grid container p={15} gap={6}>
+      <Grid item container xs={12} spacing={6}>
         <Grid item xs={12}>
           <Typography variant="h1">Stephen Head-Rapson</Typography>
         </Grid>
@@ -16,7 +16,7 @@ const LandingPage = () => {
             Welcome to my portfolio
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={9}>
           <Typography variant="body1">
             <b>I am a Full Stack Software Engineer</b> living in London. I am
             experienced with Javascript technologies such as Typescript, React,
@@ -27,14 +27,14 @@ const LandingPage = () => {
             goldsmithing or making music with friends.
           </Typography>
         </Grid>
-        <Grid item container xs={12} justifyContent="flex-start">
-          <Grid item container xs={3} alignItems="center" gap={2}>
+        <Grid item container xs={12} justifyContent="flex-start" spacing={3}>
+          <Grid item container xs="auto" alignItems="center" gap={2}>
             <Icon icon="GitHub" />
             <Typography variant="body1">
               Check out my <a href="https://github.com/SteHeRa">Github</a>
             </Typography>
           </Grid>
-          <Grid item container xs={3} alignItems="center" gap={2}>
+          <Grid item container xs="auto" alignItems="center" gap={2}>
             <Icon icon="LinkedIn" />
             <Typography variant="body1">
               Check out my{" "}
@@ -45,7 +45,7 @@ const LandingPage = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid
+      {/* <Grid
         container
         item
         xs={3}
@@ -53,10 +53,17 @@ const LandingPage = () => {
         justifyContent={"center"}
       >
         <div className="timeLine"></div>
-      </Grid>
-      <Grid item container xs={9} gap={6}>
+      </Grid> */}
+      <Grid
+        item
+        container
+        xs={12}
+        spacing={6}
+        alignItems="center"
+        justifyContent="center"
+      >
         {Object.values(projects).map((project) => (
-          <Grid item xs={12}>
+          <Grid item xs={6}>
             <ProjectCard project={project} />
           </Grid>
         ))}

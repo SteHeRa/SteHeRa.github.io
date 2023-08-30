@@ -6,26 +6,10 @@ body {
   box-sizing: border-box;
 }
 
-.timeLine {
-  border-radius: 15px;
-  margin-top: 60px;
-  margin-bottom: 120px;
-  height: 93%;
-  width: 10px;
-  background-color: #3dd2cc;
-}
-
-.timeLineDot {
-  height: 15px;
-  width: 15px;
-  border-radius: 15px;
-  background-color: #3e6b89;
-}
-
 .icon-container {
   padding: 10px;
   border-radius: 10px;
-  background-color: #eee;
+  background-color: #e5e5e5;
   display: flex;
   align-items: center;
   justify-content: center;
