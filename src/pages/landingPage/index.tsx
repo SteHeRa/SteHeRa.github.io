@@ -3,10 +3,12 @@ import { Grid, Typography } from "@mui/material";
 import ProjectCard from "../../components/projectCard";
 import Icon from "../../components/Icon";
 import { projects } from "../../data";
+import { ScrollRestoration } from "react-router-dom";
 
 const LandingPage = () => {
   return (
     <Grid container p={15} gap={6}>
+      <ScrollRestoration />
       <Grid item container xs={12} spacing={6}>
         <Grid item xs={12}>
           <Typography variant="h1">Stephen Head-Rapson</Typography>

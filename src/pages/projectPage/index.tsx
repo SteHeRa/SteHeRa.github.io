@@ -1,5 +1,11 @@
 import React from "react";
-import { useParams, Navigate, useNavigate } from "react-router-dom";
+import {
+  useParams,
+  Navigate,
+  useNavigate,
+  ScrollRestoration,
+} from "react-router-dom";
+
 import { Typography, Grid, IconButton } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { projects } from "../../data";
@@ -23,7 +29,14 @@ const ProjectPage = () => {
     projectContent;
 
   return (
-    <Grid container p={15} spacing={3}>
+    <Grid
+      container
+      p={15}
+      spacing={3}
+      alignItems="center"
+      justifyContent="center"
+    >
+      <ScrollRestoration />
       <Grid item xs={12}>
         <IconButton
           aria-label="go-back"
@@ -34,7 +47,7 @@ const ProjectPage = () => {
           <ArrowBackIcon />
         </IconButton>
       </Grid>
-      <Grid item container xs={12} spacing={6}>
+      <Grid item container xs={8} spacing={6}>
         <Grid item xs={12}>
           <Typography variant="h1">{title}</Typography>
         </Grid>
@@ -97,7 +110,7 @@ const ProjectPage = () => {
         </Grid>
         <Grid item container xs={12} spacing={3}>
           {content.map((contentItem) => {
-            if (contentItem.type === "Header") {
+            if (contentItem.type === "Heading") {
               return (
                 <Grid item xs={12}>
                   <Typography variant="h5" style={{ fontWeight: 600 }}>
@@ -132,14 +145,19 @@ const ProjectPage = () => {
                   >
                     {contentItem.content.map((imageSrc) => {
                       return (
-                        <Grid item xs={6}>
-                          <img
-                            src={`/${imageSrc}`}
-                            style={{
-                              width: "100%",
-                              objectFit: "contain",
-                            }}
-                          />
+                        <Grid
+                          item
+                          xs={Math.max(12 / contentItem.content.length, 6)}
+                        >
+                          <a href={`/${imageSrc}`} target="_blank">
+                            <img
+                              src={`/${imageSrc}`}
+                              style={{
+                                width: "100%",
+                                objectFit: "contain",
+                              }}
+                            />
+                          </a>
                         </Grid>
                       );
                     })}
