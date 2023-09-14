@@ -3,7 +3,7 @@ import { Grid, Typography } from "@mui/material";
 import ProjectCard from "../../components/projectCard";
 import Icon from "../../components/Icon";
 import { projects } from "../../data";
-import { ScrollRestoration } from "react-router-dom";
+import { ScrollRestoration, Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -47,15 +47,6 @@ const LandingPage = () => {
           </Grid>
         </Grid>
       </Grid>
-      {/* <Grid
-        container
-        item
-        xs={3}
-        alignItems={"center"}
-        justifyContent={"center"}
-      >
-        <div className="timeLine"></div>
-      </Grid> */}
       <Grid
         item
         container
@@ -69,6 +60,26 @@ const LandingPage = () => {
             <ProjectCard project={project} />
           </Grid>
         ))}
+      </Grid>
+      <Grid item container xs={12} spacing={6} pt={8}>
+        <Grid item xs={12}>
+          <Typography variant="h3" style={{ fontFamily: "Poppins" }}>
+            Let's build something together
+          </Typography>
+        </Grid>
+        <Grid item xs={9}>
+          <Typography variant="body1">
+            Feel free to reach out if you're looking for a developer, have a
+            question or just want to connect.
+          </Typography>
+        </Grid>
+        <Grid item xs={9}>
+          <Typography variant="body1">
+            <Link to="mailto: stephenheadrapson@gmail.com">
+              stephenheadrapson@gmail.com
+            </Link>
+          </Typography>
+        </Grid>
       </Grid>
     </Grid>
   );
