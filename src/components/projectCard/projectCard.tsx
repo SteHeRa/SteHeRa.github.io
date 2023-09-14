@@ -11,7 +11,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     <Link to={`/project/${projectId}`} className="project-card-link">
       <Card
         sx={{
-          minHeight: "720px",
+          height: "100%",
         }}
       >
         <CardMedia
