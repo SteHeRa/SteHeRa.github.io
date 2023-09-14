@@ -73,40 +73,59 @@ const ProjectPage = () => {
           </Typography>
         </Grid>
         <Grid item container xs={12} justifyContent="flex-start" spacing={3}>
-          <Grid item container xs="auto" alignItems="center" gap={2}>
-            {links.map((link) => {
-              if (link.type === "app") {
-                return (
-                  <>
-                    <Icon icon="Computer" />
-                    <Typography variant="body1">
-                      Check out the app <a href={link.url}>here</a>
-                    </Typography>
-                  </>
-                );
-              }
-              if (link.type === "website") {
-                return (
-                  <>
-                    <Icon icon="OpenInNew" />
-                    <Typography variant="body1">
-                      Check out the project website <a href={link.url}>here</a>
-                    </Typography>
-                  </>
-                );
-              }
-              if (link.type === "repo") {
-                return (
-                  <>
-                    <Icon icon="Code" />
-                    <Typography variant="body1">
-                      Check out the repo <a href={link.url}>here</a>
-                    </Typography>
-                  </>
-                );
-              }
-            })}
-          </Grid>
+          {links.map((link) => {
+            if (link.type === "app") {
+              return (
+                <Grid
+                  item
+                  container
+                  xs={12}
+                  md="auto"
+                  alignItems="center"
+                  gap={2}
+                >
+                  <Icon icon="Computer" />
+                  <Typography variant="body1">
+                    Check out the app <a href={link.url}>here</a>
+                  </Typography>
+                </Grid>
+              );
+            }
+            if (link.type === "website") {
+              return (
+                <Grid
+                  item
+                  container
+                  xs={12}
+                  md="auto"
+                  alignItems="center"
+                  gap={2}
+                >
+                  <Icon icon="OpenInNew" />
+                  <Typography variant="body1">
+                    Check out the project website <a href={link.url}>here</a>
+                  </Typography>
+                </Grid>
+              );
+            }
+            if (link.type === "repo") {
+              return (
+                <Grid
+                  item
+                  container
+                  xs={12}
+                  md="auto"
+                  alignItems="center"
+                  gap={2}
+                >
+                  <Icon icon="Code" />
+                  <Typography variant="body1">
+                    Check out the repo <a href={link.url}>here</a>
+                  </Typography>
+                </Grid>
+              );
+            }
+          })}
         </Grid>
         <Grid item container xs={12} spacing={3}>
           {content.map((contentItem) => {
@@ -147,7 +166,8 @@ const ProjectPage = () => {
                       return (
                         <Grid
                           item
-                          xs={Math.max(12 / contentItem.content.length, 6)}
+                          xs={12}
+                          lg={Math.max(12 / contentItem.content.length, 6)}
                         >
                           <a href={`/${imageSrc}`} target="_blank">
                             <img
