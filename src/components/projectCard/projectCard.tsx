@@ -8,7 +8,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     project;
 
   return (
-    <Link to={`/project/${projectId}`}>
+    <Link to={`/project/${projectId}`} className="project-card-link">
       <Card
         sx={{
           minHeight: "720px",
@@ -20,7 +20,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             backgroundSize: "contain",
           }}
           image={imageSrc}
-          title=""
+          title={`${projectId}-project-card-image`}
         />
         <CardContent>
           <Stack spacing={2}>
