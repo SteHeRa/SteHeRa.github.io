@@ -87,7 +87,10 @@ const ProjectPage = () => {
                 >
                   <Icon icon="Computer" />
                   <Typography variant="body1">
-                    Check out the app <a href={link.url}>here</a>
+                    Check out the app{" "}
+                    <a href={link.url} target="_blank">
+                      here
+                    </a>
                   </Typography>
                 </Grid>
               );
@@ -105,7 +108,10 @@ const ProjectPage = () => {
                 >
                   <Icon icon="OpenInNew" />
                   <Typography variant="body1">
-                    Check out the project website <a href={link.url}>here</a>
+                    Check out the project website{" "}
+                    <a href={link.url} target="_blank">
+                      here
+                    </a>
                   </Typography>
                 </Grid>
               );
@@ -123,7 +129,10 @@ const ProjectPage = () => {
                 >
                   <Icon icon="Code" />
                   <Typography variant="body1">
-                    Check out the repo <a href={link.url}>here</a>
+                    Check out the repo{" "}
+                    <a href={link.url} target="_blank">
+                      here
+                    </a>
                   </Typography>
                 </Grid>
               );
