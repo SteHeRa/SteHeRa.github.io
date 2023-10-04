@@ -72,7 +72,7 @@ const ProjectPage = () => {
             {description}
           </Typography>
         </Grid>
-        <Grid item container xs={12} justifyContent="flex-start" spacing={3}>
+        <Grid item container xs={12} justifyContent="flex-start" gap={3}>
           {links.map((link, i) => {
             if (link.type === "app") {
               return (
@@ -139,7 +139,7 @@ const ProjectPage = () => {
             }
           })}
         </Grid>
-        <Grid item container xs={12} spacing={3}>
+        <Grid item container xs={12} gap={3}>
           {content.map((contentItem, i) => {
             if (contentItem.type === "Heading") {
               return (
