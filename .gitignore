@@ -1,0 +1,7 @@
+node_modules/
+.parcel-cache/
+build/
+dist/
+.env
+.vscode/
+.parcelrc
