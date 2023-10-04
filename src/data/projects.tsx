@@ -222,7 +222,10 @@ const projectPages: { [projectId: string]: Project } = {
     techStack: ["JavaScript", "HTML/CSS", "Bootstrap"],
 
     imageSrc: "Sorting-thumbnail.png",
-    links: [],
+    links: [
+      { type: "repo", url: "https://github.com/SteHeRa/sorting-visualiser" },
+      { type: "app", url: "https://stehera.github.io/sorting-visualiser/" },
+    ],
     content: [
       {
         type: "Text",
@@ -244,7 +247,10 @@ const projectPages: { [projectId: string]: Project } = {
       "This is a program that animates and visualises the process of 'Djikstra's Algorithm' finding a shortest path between two points.",
     techStack: ["JavaScript", "JQuery", "HTML/CSS", "Bootstrap"],
     imageSrc: "Pathfinder-thumbnail.png",
-    links: [],
+    links: [
+      { type: "repo", url: "https://github.com/SteHeRa/pathfinder" },
+      { type: "app", url: "https://stehera.github.io/pathfinder/" },
+    ],
     content: [
       {
         type: "Text",
