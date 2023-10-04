@@ -38,7 +38,7 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src="/me.jpg"
+                  src="/Me.jpg"
                   style={{
                     marginTop: "-35%",
                     marginLeft: "-30%",
