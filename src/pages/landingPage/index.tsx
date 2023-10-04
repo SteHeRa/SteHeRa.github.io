@@ -1,15 +1,24 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useTheme, useMediaQuery } from "@mui/material";
 import ProjectCard from "../../components/projectCard";
 import Icon from "../../components/Icon";
 import { projects } from "../../data";
 import { ScrollRestoration, Link } from "react-router-dom";
 
 const LandingPage = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
-    <Grid container p={15} gap={6} alignItems="center" justifyContent="center">
+    <Grid
+      container
+      p={{ xs: 5, sm: 15 }}
+      gap={6}
+      alignItems="center"
+      justifyContent="center"
+    >
       <ScrollRestoration />
-      <Grid item container xs={10} lg={8} spacing={6}>
+      <Grid item container xs={12} sm={10} lg={8} spacing={6}>
         <Grid
           container
           item
@@ -18,31 +27,64 @@ const LandingPage = () => {
           alignItems="center"
           gap={{ xs: 0, lg: 1 }}
         >
-          <Grid xs={6} lg={4} display={{ xs: "none", md: "block" }}>
-            <div
-              style={{
-                width: "100%",
-                aspectRatio: "1/1",
-                overflow: "hidden",
-                borderRadius: "100%",
-              }}
-            >
-              <img
-                src="/me.jpg"
+          {matches ? (
+            <Grid xs={6} lg={4} display={{ xs: "none", md: "block" }}>
+              <div
                 style={{
-                  marginTop: "-35%",
-                  marginLeft: "-30%",
-                  height: "140%",
-                  objectFit: "contain",
+                  width: "100%",
+                  aspectRatio: "1/1",
+                  overflow: "hidden",
+                  borderRadius: "100%",
                 }}
-              />
-            </div>
-          </Grid>
+              >
+                <img
+                  src="/me.jpg"
+                  style={{
+                    marginTop: "-35%",
+                    marginLeft: "-30%",
+                    height: "140%",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+            </Grid>
+          ) : null}
           <Grid xs={12} lg={7} pt={{ xs: 0, md: 4, lg: 0 }}>
             <Typography variant="h2">
               Hi, I'm Ste. Full-stack developer and maker
             </Typography>
           </Grid>
+          {matches ? null : (
+            <Grid
+              container
+              item
+              justifyContent="center"
+              alignItems="center"
+              xs={12}
+              pt={4}
+            >
+              <Grid xs={9}>
+                <div
+                  style={{
+                    width: "100%",
+                    aspectRatio: "1/1",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    src="/me.jpg"
+                    style={{
+                      marginTop: "-35%",
+                      marginLeft: "-30%",
+                      height: "140%",
+                      objectFit: "contain",
+                    }}
+                  />
+                </div>
+              </Grid>
+            </Grid>
+          )}
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h3" style={{ fontFamily: "Poppins" }}>

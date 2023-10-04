@@ -31,7 +31,7 @@ const ProjectPage = () => {
   return (
     <Grid
       container
-      p={15}
+      p={{ xs: 5, sm: 15 }}
       spacing={3}
       alignItems="center"
       justifyContent="center"
@@ -47,7 +47,7 @@ const ProjectPage = () => {
           <ArrowBackIcon />
         </IconButton>
       </Grid>
-      <Grid item container xs={8} spacing={6}>
+      <Grid item container xs={12} sm={8} spacing={6}>
         <Grid item xs={12}>
           <Typography variant="h1">{title}</Typography>
         </Grid>
