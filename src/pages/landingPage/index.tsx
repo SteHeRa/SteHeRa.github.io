@@ -28,7 +28,7 @@ const LandingPage = () => {
           gap={{ xs: 0, lg: 1 }}
         >
           {matches ? (
-            <Grid xs={6} lg={4} display={{ xs: "none", md: "block" }}>
+            <Grid item xs={6} lg={4} display={{ xs: "none", md: "block" }}>
               <div
                 style={{
                   width: "100%",
@@ -49,7 +49,7 @@ const LandingPage = () => {
               </div>
             </Grid>
           ) : null}
-          <Grid xs={12} lg={7} pt={{ xs: 0, md: 4, lg: 0 }}>
+          <Grid item xs={12} lg={7} pt={{ xs: 0, md: 4, lg: 0 }}>
             <Typography variant="h2">
               Hi, I'm Ste. Full-stack developer and maker
             </Typography>
@@ -63,7 +63,7 @@ const LandingPage = () => {
               xs={12}
               pt={4}
             >
-              <Grid xs={9}>
+              <Grid item xs={9}>
                 <div
                   style={{
                     width: "100%",
@@ -137,8 +137,8 @@ const LandingPage = () => {
             Check out what I've been working on
           </Typography>
         </Grid>
-        {Object.values(projects).map((project) => (
-          <Grid item xs={12} lg={6}>
+        {Object.values(projects).map((project, i) => (
+          <Grid item xs={12} lg={6} key={`project-${project.projectId}-${i}`}>
             <ProjectCard project={project} />
           </Grid>
         ))}

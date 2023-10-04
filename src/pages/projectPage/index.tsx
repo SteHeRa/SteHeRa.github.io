@@ -73,7 +73,7 @@ const ProjectPage = () => {
           </Typography>
         </Grid>
         <Grid item container xs={12} justifyContent="flex-start" spacing={3}>
-          {links.map((link) => {
+          {links.map((link, i) => {
             if (link.type === "app") {
               return (
                 <Grid
@@ -83,6 +83,7 @@ const ProjectPage = () => {
                   md="auto"
                   alignItems="center"
                   gap={2}
+                  key={`link-${link.type}-${i}`}
                 >
                   <Icon icon="Computer" />
                   <Typography variant="body1">
@@ -100,6 +101,7 @@ const ProjectPage = () => {
                   md="auto"
                   alignItems="center"
                   gap={2}
+                  key={`link-${link.type}-${i}`}
                 >
                   <Icon icon="OpenInNew" />
                   <Typography variant="body1">
@@ -117,6 +119,7 @@ const ProjectPage = () => {
                   md="auto"
                   alignItems="center"
                   gap={2}
+                  key={`link-${link.type}-${i}`}
                 >
                   <Icon icon="Code" />
                   <Typography variant="body1">
@@ -128,10 +131,14 @@ const ProjectPage = () => {
           })}
         </Grid>
         <Grid item container xs={12} spacing={3}>
-          {content.map((contentItem) => {
+          {content.map((contentItem, i) => {
             if (contentItem.type === "Heading") {
               return (
-                <Grid item xs={12}>
+                <Grid
+                  item
+                  xs={12}
+                  key={`content-item-${contentItem.type}-${i}`}
+                >
                   <Typography variant="h5" style={{ fontWeight: 600 }}>
                     {contentItem.content}
                   </Typography>
@@ -140,7 +147,11 @@ const ProjectPage = () => {
             }
             if (contentItem.type === "Text") {
               return (
-                <Grid item xs={12}>
+                <Grid
+                  item
+                  xs={12}
+                  key={`content-item-${contentItem.type}-${i}`}
+                >
                   <Typography variant="body1">{contentItem.content}</Typography>
                 </Grid>
               );
@@ -153,6 +164,7 @@ const ProjectPage = () => {
                   xs={12}
                   justifyContent="center"
                   alignItems="center"
+                  key={`content-item-${contentItem.type}-${i}`}
                 >
                   <Grid
                     item
@@ -162,12 +174,13 @@ const ProjectPage = () => {
                     justifyContent="center"
                     alignItems="center"
                   >
-                    {contentItem.content.map((imageSrc) => {
+                    {contentItem.content.map((imageSrc, i) => {
                       return (
                         <Grid
                           item
                           xs={12}
                           lg={Math.max(12 / contentItem.content.length, 6)}
+                          key={`image-${imageSrc}-${i}`}
                         >
                           <a href={`/${imageSrc}`} target="_blank">
                             <img
