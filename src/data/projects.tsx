@@ -73,7 +73,10 @@ const projectPages: { [projectId: string]: Project } = {
       },
       {
         type: "Image",
-        content: ["Fika-screenshot-6.png", "Fika-screenshot-8.png"],
+        content: [
+          "Fika-courses-screenshot.png",
+          "Fika-share-course-screenshot.png",
+        ],
       },
       {
         type: "Text",
@@ -180,6 +183,7 @@ const projectPages: { [projectId: string]: Project } = {
         content:
           "This was my final project for the software development bootcamp that I attended in 2020. I worked on this project with two other developers, and it was the first time I had collaborated with other developers on a larger project. We built the app over the course of two weeks and followed agile development practices and rituals over the two-week development window.",
       },
+      { type: "Image", content: ["Zapp-readme-header.png"] },
       {
         type: "Text",
         content:
